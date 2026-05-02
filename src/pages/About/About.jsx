@@ -4,6 +4,7 @@ import StatCard from '../../components/StatCard/StatCard';
 import FAQItem from '../../components/FAQItem/FAQItem';
 import GradientButton from '../../components/GradientButton/GradientButton';
 import LogoMarquee from '../../components/LogoMarquee/LogoMarquee';
+import ScrollReveal from '../../components/ScrollReveal/ScrollReveal';
 import './About.css';
 
 const coreValues = [
@@ -49,7 +50,9 @@ export default function About() {
       <section className="about-hero" id="about-hero">
         <div className="about-hero__glow" />
         <div className="container">
-          <h1 className="about-hero__title">About <span className="gradient-text">Creative 360 Pro</span></h1>
+          <ScrollReveal animation="fade-up">
+            <h1 className="about-hero__title">About <span className="gradient-text">Creative 360 Pro</span></h1>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -57,10 +60,12 @@ export default function About() {
       <section className="about-founder section" id="about-founder">
         <div className="container">
           <div className="about-founder__grid">
-            <div className="about-founder__image">
-              <div className="about-founder__image-inner" />
-            </div>
-            <div className="about-founder__content">
+            <ScrollReveal animation="fade-right">
+              <div className="about-founder__image">
+                <div className="about-founder__image-inner" />
+              </div>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-left" delay={200} className="about-founder__content">
               <p>
                 Alex Gray is the visionary founder of Creative 360 Pro, a distinguished marketing firm headquartered in New Jersey. His professional trajectory is defined by a rigorous six-year tenure in the IT sector, complemented by multiple advanced technical certifications.
               </p>
@@ -70,7 +75,7 @@ export default function About() {
               <p>
                 Creative 360 Pro holds the prestigious status of a Google Premier Partner, awarded three consecutive times for industry-leading results. While our digital footprint is nationwide, we maintain a firm physical presence in New Jersey.
               </p>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -78,36 +83,44 @@ export default function About() {
       {/* ════════ WHY CHOOSE US ════════ */}
       <section className="about-why section" id="about-why">
         <div className="container">
-          <SectionHeading
-            label="Why Creative 360 Pro"
-            title="Why Choose Creative 360 Pro?"
-            subtitle="Rather than lean on hyperbole or grand claims, we prefer to let the data speak for itself."
-          />
-          <div className="about-why__content">
-            <p>
-              We are trusted by over 400 businesses across the USA. We have generated millions in additional revenue for our partners. We dominate the search rankings ourselves, proving our methods work.
-            </p>
-            <p>
-              Our USA headquarters houses over 50 in-house experts, and we maintain a 4.8/5-star rating from over 450 verified reviews. We are results-obsessed — if we don't deliver on our promises, you don't pay.
-            </p>
-          </div>
+          <ScrollReveal animation="fade-up">
+            <SectionHeading
+              label="Why Creative 360 Pro"
+              title="Why Choose Creative 360 Pro?"
+              subtitle="Rather than lean on hyperbole or grand claims, we prefer to let the data speak for itself."
+            />
+          </ScrollReveal>
+          <ScrollReveal animation="fade-up" delay={200}>
+            <div className="about-why__content">
+              <p>
+                We are trusted by over 400 businesses across the USA. We have generated millions in additional revenue for our partners. We dominate the search rankings ourselves, proving our methods work.
+              </p>
+              <p>
+                Our USA headquarters houses over 50 in-house experts, and we maintain a 4.8/5-star rating from over 450 verified reviews. We are results-obsessed — if we don't deliver on our promises, you don't pay.
+              </p>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ════════ CORE VALUES ════════ */}
       <section className="about-values section" id="about-values">
         <div className="container">
-          <SectionHeading
-            label="Strategic Solutions For The Modern Economy"
-            title="We Don't Just Build Websites We Build Digital Legacies"
-          />
+          <ScrollReveal animation="fade-up">
+            <SectionHeading
+              label="Strategic Solutions For The Modern Economy"
+              title="We Don't Just Build Websites We Build Digital Legacies"
+            />
+          </ScrollReveal>
           <div className="about-values__grid">
             {coreValues.map((v, i) => (
-              <div key={i} className="about-value-card">
-                <div className="about-value-card__icon">{v.icon}</div>
-                <h3 className="about-value-card__title">{v.title}</h3>
-                <p className="about-value-card__desc">{v.desc}</p>
-              </div>
+              <ScrollReveal key={i} animation="fade-up" delay={i * 120}>
+                <div className="about-value-card">
+                  <div className="about-value-card__icon">{v.icon}</div>
+                  <h3 className="about-value-card__title">{v.title}</h3>
+                  <p className="about-value-card__desc">{v.desc}</p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -116,13 +129,17 @@ export default function About() {
       {/* ════════ STATS ════════ */}
       <section className="about-stats section" id="about-stats">
         <div className="container">
-          <SectionHeading
-            label="Statistics"
-            title="We Empower Brands To Dominate The Digital Landscape"
-          />
+          <ScrollReveal animation="fade-up">
+            <SectionHeading
+              label="Statistics"
+              title="We Empower Brands To Dominate The Digital Landscape"
+            />
+          </ScrollReveal>
           <div className="about-stats__grid">
             {stats.map((s, i) => (
-              <StatCard key={i} number={s.number} suffix={s.suffix} label={s.label} />
+              <ScrollReveal key={i} animation="fade-up" delay={i * 120}>
+                <StatCard number={s.number} suffix={s.suffix} label={s.label} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -135,18 +152,20 @@ export default function About() {
       <section className="about-strategies section" id="about-strategies">
         <div className="container">
           <div className="about-strategies__inner">
-            <div className="about-strategies__decorative">
-              <span>WINNING</span>
-              <span>STRATEGIES</span>
-            </div>
-            <div className="about-strategies__content">
+            <ScrollReveal animation="fade-right">
+              <div className="about-strategies__decorative">
+                <span>WINNING</span>
+                <span>STRATEGIES</span>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-left" delay={200} className="about-strategies__content">
               <span className="about-strategies__label">Let's talk about</span>
               <h2 className="gradient-text">STRATEGIES</h2>
               <p>Your next level starts with a strategy built to perform. Let's make it happen.</p>
               <GradientButton to="/contact-us" size="lg">
                 Book A Discovery Call
               </GradientButton>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -154,17 +173,21 @@ export default function About() {
       {/* ════════ COMPANY PERSPECTIVE ════════ */}
       <section className="about-perspective section" id="about-perspective">
         <div className="container">
-          <SectionHeading
-            label="Our Company Perspective"
-            subtitle="Creative 360 Pro provides many ways to market your business or brand. We provide effective ways for our customers to reach a more targeted audience and brand visibility."
-          />
+          <ScrollReveal animation="fade-up">
+            <SectionHeading
+              label="Our Company Perspective"
+              subtitle="Creative 360 Pro provides many ways to market your business or brand. We provide effective ways for our customers to reach a more targeted audience and brand visibility."
+            />
+          </ScrollReveal>
           <div className="about-perspective__grid">
             {perspectives.map((p, i) => (
-              <div key={i} className="perspective-card">
-                <span className="perspective-card__badge">CREATIVE 360 PRO</span>
-                <h3 className="perspective-card__title">{p.title}</h3>
-                <p className="perspective-card__desc">{p.desc}</p>
-              </div>
+              <ScrollReveal key={i} animation="fade-up" delay={i * 100}>
+                <div className="perspective-card">
+                  <span className="perspective-card__badge">CREATIVE 360 PRO</span>
+                  <h3 className="perspective-card__title">{p.title}</h3>
+                  <p className="perspective-card__desc">{p.desc}</p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -173,10 +196,14 @@ export default function About() {
       {/* ════════ FAQ ════════ */}
       <section className="about-faq section" id="about-faq">
         <div className="container">
-          <SectionHeading label="Frequently Asked Questions" title="Got Questions? We've Got Answers!" />
+          <ScrollReveal animation="fade-up">
+            <SectionHeading label="Frequently Asked Questions" title="Got Questions? We've Got Answers!" />
+          </ScrollReveal>
           <div className="about-faq__list">
             {faqs.map((faq, i) => (
-              <FAQItem key={i} question={faq.question} answer={faq.answer} />
+              <ScrollReveal key={i} animation="fade-up" delay={i * 80} duration={500}>
+                <FAQItem question={faq.question} answer={faq.answer} />
+              </ScrollReveal>
             ))}
           </div>
         </div>

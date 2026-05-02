@@ -1,5 +1,6 @@
 import { FaStar } from 'react-icons/fa';
 import SectionHeading from '../../components/SectionHeading/SectionHeading';
+import ScrollReveal from '../../components/ScrollReveal/ScrollReveal';
 import './Reviews.css';
 
 const reviews = [
@@ -17,28 +18,34 @@ export default function Reviews() {
       <section className="reviews-hero" id="reviews-hero">
         <div className="reviews-hero__glow" />
         <div className="container">
-          <h1 className="reviews-hero__title">Client <span className="gradient-text">Reviews</span></h1>
-          <p className="reviews-hero__sub">267+ 5-Star Reviews — Our clients love working with us.</p>
+          <ScrollReveal animation="fade-up">
+            <h1 className="reviews-hero__title">Client <span className="gradient-text">Reviews</span></h1>
+            <p className="reviews-hero__sub">267+ 5-Star Reviews — Our clients love working with us.</p>
+          </ScrollReveal>
         </div>
       </section>
 
       <section className="reviews-grid-section section" id="reviews-grid">
         <div className="container">
-          <SectionHeading label="Testimonials" title="What Our Clients Say" />
+          <ScrollReveal animation="fade-up">
+            <SectionHeading label="Testimonials" title="What Our Clients Say" />
+          </ScrollReveal>
           <div className="reviews-grid">
             {reviews.map((r, i) => (
-              <div key={i} className="review-card">
-                <div className="review-card__stars">
-                  {[...Array(r.rating)].map((_, j) => (
-                    <FaStar key={j} className="review-card__star" />
-                  ))}
+              <ScrollReveal key={i} animation="fade-up" delay={i * 100} duration={600}>
+                <div className="review-card">
+                  <div className="review-card__stars">
+                    {[...Array(r.rating)].map((_, j) => (
+                      <FaStar key={j} className="review-card__star" />
+                    ))}
+                  </div>
+                  <p className="review-card__text">"{r.text}"</p>
+                  <div className="review-card__author">
+                    <div className="review-card__avatar">{r.name[0]}</div>
+                    <span className="review-card__name">{r.name}</span>
+                  </div>
                 </div>
-                <p className="review-card__text">"{r.text}"</p>
-                <div className="review-card__author">
-                  <div className="review-card__avatar">{r.name[0]}</div>
-                  <span className="review-card__name">{r.name}</span>
-                </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>

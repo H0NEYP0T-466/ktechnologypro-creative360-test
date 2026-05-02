@@ -2,6 +2,7 @@ import { FaSearch, FaBullhorn, FaLaptopCode, FaShareAlt, FaComments, FaUsers, Fa
 import SectionHeading from '../../components/SectionHeading/SectionHeading';
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import GradientButton from '../../components/GradientButton/GradientButton';
+import ScrollReveal from '../../components/ScrollReveal/ScrollReveal';
 import './Services.css';
 
 const services = [
@@ -44,24 +45,30 @@ export default function Services() {
       <section className="services-hero" id="services-hero">
         <div className="services-hero__glow" />
         <div className="container">
-          <h1 className="services-hero__title">Our <span className="gradient-text">Services</span></h1>
-          <p className="services-hero__subtitle">
-            We deliver elite digital marketing solutions that drive measurable results for businesses across the USA.
-          </p>
+          <ScrollReveal animation="fade-up">
+            <h1 className="services-hero__title">Our <span className="gradient-text">Services</span></h1>
+            <p className="services-hero__subtitle">
+              We deliver elite digital marketing solutions that drive measurable results for businesses across the USA.
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* ════════ SERVICE GRID ════════ */}
       <section className="services-grid-section section" id="services-grid">
         <div className="container">
-          <SectionHeading
-            label="What We Offer"
-            title="Full-Service Digital Marketing"
-            subtitle="From SEO to social media, we've got every angle covered."
-          />
+          <ScrollReveal animation="fade-up">
+            <SectionHeading
+              label="What We Offer"
+              title="Full-Service Digital Marketing"
+              subtitle="From SEO to social media, we've got every angle covered."
+            />
+          </ScrollReveal>
           <div className="services-grid-section__grid">
             {services.map((s, i) => (
-              <ServiceCard key={i} {...s} />
+              <ScrollReveal key={i} animation="fade-up" delay={i * 120}>
+                <ServiceCard {...s} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -72,11 +79,13 @@ export default function Services() {
         <div className="container">
           <div className="services-trust__grid">
             {trustCards.map((t, i) => (
-              <div key={i} className="trust-card">
-                <div className="trust-card__icon">{t.icon}</div>
-                <h3 className="trust-card__title">{t.title}</h3>
-                <p className="trust-card__desc">{t.desc}</p>
-              </div>
+              <ScrollReveal key={i} animation="fade-up" delay={i * 120}>
+                <div className="trust-card">
+                  <div className="trust-card__icon">{t.icon}</div>
+                  <h3 className="trust-card__title">{t.title}</h3>
+                  <p className="trust-card__desc">{t.desc}</p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -85,18 +94,20 @@ export default function Services() {
       {/* ════════ CTA ════════ */}
       <section className="services-cta section" id="services-cta">
         <div className="container">
-          <div className="services-cta__inner">
-            <h2>Ready To Dominate Your Market?</h2>
-            <p>100% Satisfaction Guarantee — Love your site or we revise it free.</p>
-            <div className="services-cta__actions">
-              <GradientButton to="/contact-us" size="lg">
-                Get My Free Strategy Call
-              </GradientButton>
-              <GradientButton href="tel:+19735631729" variant="secondary" size="lg">
-                Call Now: (973) 563-1729
-              </GradientButton>
+          <ScrollReveal animation="scale" duration={800}>
+            <div className="services-cta__inner">
+              <h2>Ready To Dominate Your Market?</h2>
+              <p>100% Satisfaction Guarantee — Love your site or we revise it free.</p>
+              <div className="services-cta__actions">
+                <GradientButton to="/contact-us" size="lg">
+                  Get My Free Strategy Call
+                </GradientButton>
+                <GradientButton href="tel:+19735631729" variant="secondary" size="lg">
+                  Call Now: (973) 563-1729
+                </GradientButton>
+              </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>

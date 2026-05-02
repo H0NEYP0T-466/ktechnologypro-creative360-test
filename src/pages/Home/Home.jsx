@@ -6,6 +6,7 @@ import StatCard from '../../components/StatCard/StatCard';
 import FAQItem from '../../components/FAQItem/FAQItem';
 import BlogCard from '../../components/BlogCard/BlogCard';
 import LogoMarquee from '../../components/LogoMarquee/LogoMarquee';
+import ScrollReveal from '../../components/ScrollReveal/ScrollReveal';
 import './Home.css';
 
 const stats = [
@@ -106,9 +107,15 @@ const trustBadges = [
 ];
 
 const caseStudies = [
-  'Trektek Technology Solutions', 'Venus Vogue', 'MY RV Services LLC',
-  'Boney Auto Enhancement Center LLC', 'Aum Cellars', 'Roofing and Siding Wi Pros',
-  'Ben\'s 24 Hour Towing', 'Health Haven Concierge', 'Donation Separation',
+  { name: 'Trektek Technology Solutions', image: '/images/cases/trektek.png' },
+  { name: 'Venus Vogue', image: '/images/cases/venus-vogue.png' },
+  { name: 'MY RV Services LLC', image: '/images/cases/rv-services.png' },
+  { name: 'Boney Auto Enhancement Center LLC', image: '/images/cases/boney-auto.png' },
+  { name: 'Aum Cellars', image: '/images/cases/aum-cellars.png' },
+  { name: 'Roofing and Siding Wi Pros', image: '/images/cases/roofing.png' },
+  { name: 'Ben\'s 24 Hour Towing', image: '/images/cases/towing.png' },
+  { name: 'Health Haven Concierge', image: '/images/cases/health-haven.png' },
+  { name: 'Donation Separation', image: '/images/cases/donation.png' },
 ];
 
 const faqs = [
@@ -121,10 +128,10 @@ const faqs = [
 ];
 
 const blogPosts = [
-  { title: 'Unveiling the Organic Powerhouse: Deep Diving into SEO with Creative 360 Pro', excerpt: 'Discover how Tech Haven skyrocketed its online sales by 40% with Digital Impact\'s tailored SEO strategy!' },
-  { title: 'Cultivating Connections: Strategic Social Media Marketing with Creative 360 Pro', excerpt: 'Discover how Tech Haven skyrocketed its online sales by 40% with Digital Impact\'s tailored SEO strategy!' },
-  { title: 'Navigating the Digital Frontier: Staying Ahead in the Evolving Landscape', excerpt: 'Discover how Tech Haven skyrocketed its online sales by 40% with Digital Impact\'s tailored SEO strategy!' },
-  { title: 'The Fusion of Power: Maximizing Impact Through the Synergy of SEO and Google Ads', excerpt: 'Discover how Tech Haven skyrocketed its online sales by 40% with Digital Impact\'s tailored SEO strategy!' },
+  { title: 'Unveiling the Organic Powerhouse: Deep Diving into SEO with Creative 360 Pro', excerpt: 'Discover how Tech Haven skyrocketed its online sales by 40% with Digital Impact\'s tailored SEO strategy!', image: '/images/blog/seo.png' },
+  { title: 'Cultivating Connections: Strategic Social Media Marketing with Creative 360 Pro', excerpt: 'Discover how Tech Haven skyrocketed its online sales by 40% with Digital Impact\'s tailored SEO strategy!', image: '/images/blog/social.png' },
+  { title: 'Navigating the Digital Frontier: Staying Ahead in the Evolving Landscape', excerpt: 'Discover how Tech Haven skyrocketed its online sales by 40% with Digital Impact\'s tailored SEO strategy!', image: '/images/blog/digital.png' },
+  { title: 'The Fusion of Power: Maximizing Impact Through the Synergy of SEO and Google Ads', excerpt: 'Discover how Tech Haven skyrocketed its online sales by 40% with Digital Impact\'s tailored SEO strategy!', image: '/images/blog/ads.png' },
 ];
 
 const marqueeItems1 = ['Best Marketing Agency', 'Digital Strategy', 'Website Design', 'Content'];
@@ -136,24 +143,31 @@ export default function Home() {
       {/* ════════ HERO ════════ */}
       <section className="hero" id="hero-section">
         <div className="hero__bg-lines" />
+        <div className="hero__world-map" />
         <div className="hero__top-glow" />
         <div className="container hero__container">
           <div className="hero__content">
-            <h1 className="hero__heading">
-              <span className="hero__line-stop">STOP SEARCHING —</span>
-              <span className="hero__line-found">YOU'VE FOUND THE TOP</span>
-              <span className="hero__line-agency">DIGITAL MARKETING AGENCY</span>
-            </h1>
-            <p className="hero__subtext">
-              Most agencies are great at sending monthly reports full of
-              "vanity metrics" that don't pay the bills. We're different. We
-              operate like a pack of wolves-calculated, aggressive, and
-              hitting your market from every possible angle to ensure
-              your competitors never see you coming.
-            </p>
-            <GradientButton to="/contact-us" size="lg" id="hero-cta" className="hero__cta">
-              BOOK A CALL WITH US <FaArrowRight />
-            </GradientButton>
+            <ScrollReveal animation="fade-up" duration={800}>
+              <h1 className="hero__heading">
+                <span className="hero__line-stop">STOP SEARCHING —</span>
+                <span className="hero__line-found">YOU'VE FOUND THE TOP</span>
+                <span className="hero__line-agency">DIGITAL MARKETING AGENCY</span>
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-up" delay={200} duration={800}>
+              <p className="hero__subtext">
+                Most agencies are great at sending monthly reports full of
+                "vanity metrics" that don't pay the bills. We're different. We
+                operate like a pack of wolves-calculated, aggressive, and
+                hitting your market from every possible angle to ensure
+                your competitors never see you coming.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal animation="fade-up" delay={400} duration={800}>
+              <GradientButton to="/contact-us" size="lg" id="hero-cta" className="hero__cta">
+                BOOK A CALL WITH US <FaArrowRight />
+              </GradientButton>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -162,16 +176,16 @@ export default function Home() {
       <section className="team-section section" id="team-section">
         <div className="container">
           <div className="team-section__grid">
-            <div className="team-section__left">
+            <ScrollReveal animation="fade-right" className="team-section__left">
               <div className="team-section__pills">
                 {teamPills.map((pill, i) => (
-                  <div key={i} className={`team-pill team-pill--${i + 1}`}>
+                  <ScrollReveal key={i} animation="fade-right" delay={i * 150} as="div" className={`team-pill team-pill--${i + 1}`}>
                     {pill}
-                  </div>
+                  </ScrollReveal>
                 ))}
               </div>
-            </div>
-            <div className="team-section__right">
+            </ScrollReveal>
+            <ScrollReveal animation="fade-left" delay={200} className="team-section__right">
               <span className="section-label">Our Story</span>
               <h2>The Team Behind the Results</h2>
               <p>
@@ -180,7 +194,7 @@ export default function Home() {
               <p>
                 Statistics are great, but what actually matters is your ROI. Our mission is straightforward: we amplify your online visibility to directly increase your revenue. We don't just promise results; we deliver them. By navigating the most competitive search landscapes in the country, we've generated millions in additional profit for our partners, moving them from page ten to the #1 spot.
               </p>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -189,7 +203,7 @@ export default function Home() {
       <section className="solutions-section section" id="solutions-section">
         <div className="container">
           <div className="solutions-section__grid">
-            <div className="solutions-section__left">
+            <ScrollReveal animation="fade-right" className="solutions-section__left-wrap">
               <h2 className="solutions-section__title">End-to-End Solutions</h2>
               <p className="solutions-section__text">
                 Our Methodology Claiming to master every facet of the search landscape is a big swing, but it's one we knock out of the park daily. We operate like a pack of wolves, attacking your competition from every possible flank. We leave no stone unturned.
@@ -200,13 +214,15 @@ export default function Home() {
               <GradientButton href="https://meetings-na2.hubspot.com/alex-gray" size="md" className="solutions-section__cta">
                 Get 30 Min FREE CONSULTATION <FaArrowRight />
               </GradientButton>
-            </div>
+            </ScrollReveal>
             <div className="solutions-section__cards">
               {solutionCards.map((card, i) => (
-                <div key={i} className={`solution-card solution-card--${card.color}`}>
-                  <h4 className="solution-card__title">{card.title}</h4>
-                  <p className="solution-card__desc">{card.desc}</p>
-                </div>
+                <ScrollReveal key={i} animation="scale" delay={i * 100} duration={600}>
+                  <div className={`solution-card solution-card--${card.color}`}>
+                    <h4 className="solution-card__title">{card.title}</h4>
+                    <p className="solution-card__desc">{card.desc}</p>
+                  </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
@@ -221,7 +237,9 @@ export default function Home() {
         <div className="container">
           <div className="stats-section__grid">
             {stats.map((s, i) => (
-              <StatCard key={i} number={s.number} suffix={s.suffix} label={s.label} />
+              <ScrollReveal key={i} animation="fade-up" delay={i * 120}>
+                <StatCard number={s.number} suffix={s.suffix} label={s.label} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -230,7 +248,7 @@ export default function Home() {
       {/* ════════ SERVICES ════════ */}
       <section className="services-section section" id="services-section">
         <div className="container">
-          <div className="services-section__intro">
+          <ScrollReveal animation="fade-up" className="services-section__intro">
             <SectionHeading label="Our Best Services" />
             <p className="services-section__desc">
               Let's be real, most "full-service" agencies in the USA are just collections of freelancers in a trench coat. We're different. We've built a coordinated strike team that hits your market from every conceivable angle. Whether we're rebuilding your digital storefront from the studs up or hunting down the top spot on Google, our approach is relentless, data-backed, and dare we say a little bit obsessed. We don't just offer "services", we provide the high-caliber ammunition your brand needs to blow the competition out of the water.
@@ -238,17 +256,19 @@ export default function Home() {
             <GradientButton to="/services" size="lg" className="services-section__view-all">
               VIEW ALL SERVICES <FaArrowRight />
             </GradientButton>
-          </div>
+          </ScrollReveal>
           <div className="services-section__grid">
             {services.map((s, i) => (
-              <div key={i} className={`service-card-home service-card-home--${i % 2 === 0 ? 'purple' : 'orange'}`}>
-                <div className="service-card-home__icon">
-                  {s.icon}
+              <ScrollReveal key={i} animation="fade-up" delay={i * 100} duration={600}>
+                <div className={`service-card-home service-card-home--${i % 2 === 0 ? 'purple' : 'orange'}`}>
+                  <div className="service-card-home__icon">
+                    {s.icon}
+                  </div>
+                  <h3 className="service-card-home__title">{s.title}</h3>
+                  <p className="service-card-home__desc">{s.description}</p>
+                  <span className="service-card-home__link">Learn More <FaArrowRight /></span>
                 </div>
-                <h3 className="service-card-home__title">{s.title}</h3>
-                <p className="service-card-home__desc">{s.description}</p>
-                <span className="service-card-home__link">Learn More <FaArrowRight /></span>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -259,19 +279,21 @@ export default function Home() {
         <div className="container">
           <div className="service-boxes-section__grid">
             {serviceBoxes.map((box, i) => (
-              <div key={i} className="service-box">
-                <div className="service-box__icon">{box.icon}</div>
-                <h2 className="service-box__title">{box.title}</h2>
-                <ul className="service-box__features">
-                  {box.features.map((f, j) => (
-                    <li key={j}><FaCheckCircle className="service-box__check" /> {f}</li>
-                  ))}
-                </ul>
-                <p className="service-box__desc">{box.description}</p>
-                <GradientButton to={box.ctaLink} size="md">
-                  {box.ctaText}
-                </GradientButton>
-              </div>
+              <ScrollReveal key={i} animation={i === 0 ? 'fade-right' : 'fade-left'} delay={i * 150} duration={700}>
+                <div className="service-box">
+                  <div className="service-box__icon">{box.icon}</div>
+                  <h2 className="service-box__title">{box.title}</h2>
+                  <ul className="service-box__features">
+                    {box.features.map((f, j) => (
+                      <li key={j}><FaCheckCircle className="service-box__check" /> {f}</li>
+                    ))}
+                  </ul>
+                  <p className="service-box__desc">{box.description}</p>
+                  <GradientButton to={box.ctaLink} size="md">
+                    {box.ctaText}
+                  </GradientButton>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -284,14 +306,16 @@ export default function Home() {
       <section className="boost-section section" id="boost-section">
         <div className="container">
           <div className="boost-section__inner">
-            <div className="boost-section__content">
-              <span className="boost-section__label">✳ Turn Visitors Into Customers</span>
-              <h2 className="boost-section__heading">BOOST<br/>Your Sales</h2>
-              <p>Gain a fresh perspective on your most important touchpoints. Let's connect today.</p>
-              <GradientButton to="/contact-us" size="lg">
-                Book A Discovery Call <FaArrowRight />
-              </GradientButton>
-            </div>
+            <ScrollReveal animation="scale" duration={800}>
+              <div className="boost-section__content">
+                <span className="boost-section__label">✳ Turn Visitors Into Customers</span>
+                <h2 className="boost-section__heading">BOOST<br/>Your Sales</h2>
+                <p>Gain a fresh perspective on your most important touchpoints. Let's connect today.</p>
+                <GradientButton to="/contact-us" size="lg">
+                  Book A Discovery Call <FaArrowRight />
+                </GradientButton>
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -301,10 +325,12 @@ export default function Home() {
         <div className="container">
           <div className="metrics-section__grid">
             {metricCards.map((m, i) => (
-              <div key={i} className="metric-card">
-                <span className="metric-card__number">{m.number}</span>
-                <p className="metric-card__desc">{m.description}</p>
-              </div>
+              <ScrollReveal key={i} animation="fade-up" delay={i * 100} duration={600}>
+                <div className="metric-card">
+                  <span className="metric-card__number">{m.number}</span>
+                  <p className="metric-card__desc">{m.description}</p>
+                </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -316,19 +342,23 @@ export default function Home() {
           <div className="value-section__grid">
             <div className="value-section__cards">
               {valueProps.map((v, i) => (
-                <div key={i} className="value-card">
-                  <h3 className="value-card__title">{v.title}</h3>
-                  <p className="value-card__desc">{v.desc}</p>
-                </div>
+                <ScrollReveal key={i} animation="fade-up" delay={i * 120}>
+                  <div className="value-card">
+                    <h3 className="value-card__title">{v.title}</h3>
+                    <p className="value-card__desc">{v.desc}</p>
+                  </div>
+                </ScrollReveal>
               ))}
             </div>
-            <div className="value-section__badges">
-              {trustBadges.map((b, i) => (
-                <span key={i} className="value-badge">
-                  <FaCheckCircle /> {b}
-                </span>
-              ))}
-            </div>
+            <ScrollReveal animation="fade-left" delay={200}>
+              <div className="value-section__badges">
+                {trustBadges.map((b, i) => (
+                  <span key={i} className="value-badge">
+                    <FaCheckCircle /> {b}
+                  </span>
+                ))}
+              </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -336,15 +366,21 @@ export default function Home() {
       {/* ════════ CASE STUDIES ════════ */}
       <section className="cases-section section" id="case-studies-section">
         <div className="container">
-          <SectionHeading label="Case Studies" title="Sneak Peek Of Our Work" />
+          <ScrollReveal animation="fade-up">
+            <SectionHeading label="Case Studies" title="Sneak Peek Of Our Work" />
+          </ScrollReveal>
           <div className="cases-section__grid">
-            {caseStudies.map((name, i) => (
-              <div key={i} className="case-card">
-                <div className="case-card__image" />
-                <div className="case-card__overlay">
-                  <h4 className="case-card__name">{name}</h4>
+            {caseStudies.map((study, i) => (
+              <ScrollReveal key={i} animation="scale" delay={i * 80} duration={600}>
+                <div className="case-card">
+                  <div className="case-card__image">
+                    <img src={study.image} alt={study.name} loading="lazy" />
+                  </div>
+                  <div className="case-card__overlay">
+                    <h4 className="case-card__name">{study.name}</h4>
+                  </div>
                 </div>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -354,21 +390,21 @@ export default function Home() {
       <section className="strategies-section section" id="strategies-section">
         <div className="container">
           <div className="strategies-section__inner">
-            <div className="strategies-section__left">
+            <ScrollReveal animation="fade-right" className="strategies-section__left">
               <span className="strategies-section__label">Let's talk about</span>
               <p className="strategies-section__subtext">Your next level starts with a strategy built to perform. Let's make it happen.</p>
               <GradientButton to="/contact-us" size="lg" className="strategies-section__btn">
                 BOOK A DISCOVERY CALL <FaArrowRight />
               </GradientButton>
-            </div>
-            <div className="strategies-section__right">
+            </ScrollReveal>
+            <ScrollReveal animation="fade-left" delay={200} className="strategies-section__right">
               <div className="strategies-section__winning-box">
                 <span>WINNING</span>
               </div>
               <div className="strategies-section__strategies-text">
                 STRATEGIES
               </div>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
@@ -376,10 +412,14 @@ export default function Home() {
       {/* ════════ FAQ ════════ */}
       <section className="faq-section section" id="faq-section">
         <div className="container">
-          <SectionHeading label="Frequently Asked Questions" title="Got Questions? We've Got Answers!" />
+          <ScrollReveal animation="fade-up">
+            <SectionHeading label="Frequently Asked Questions" title="Got Questions? We've Got Answers!" />
+          </ScrollReveal>
           <div className="faq-section__list">
             {faqs.map((faq, i) => (
-              <FAQItem key={i} question={faq.question} answer={faq.answer} />
+              <ScrollReveal key={i} animation="fade-up" delay={i * 80} duration={500}>
+                <FAQItem question={faq.question} answer={faq.answer} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -388,15 +428,19 @@ export default function Home() {
       {/* ════════ BLOG ════════ */}
       <section className="blog-section section" id="blog-section">
         <div className="container">
-          <div className="blog-section__header">
-            <SectionHeading label="Worth A Read!" align="left" />
-            <GradientButton to="/articles" variant="secondary" size="sm">
-              View All Blogs
-            </GradientButton>
-          </div>
+          <ScrollReveal animation="fade-up">
+            <div className="blog-section__header">
+              <SectionHeading label="Worth A Read!" align="left" />
+              <GradientButton to="/articles" variant="secondary" size="sm">
+                View All Blogs
+              </GradientButton>
+            </div>
+          </ScrollReveal>
           <div className="blog-section__grid">
             {blogPosts.map((post, i) => (
-              <BlogCard key={i} title={post.title} excerpt={post.excerpt} />
+              <ScrollReveal key={i} animation="fade-up" delay={i * 120} duration={600}>
+                <BlogCard title={post.title} excerpt={post.excerpt} image={post.image} />
+              </ScrollReveal>
             ))}
           </div>
         </div>

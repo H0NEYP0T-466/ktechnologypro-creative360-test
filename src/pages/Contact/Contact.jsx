@@ -2,6 +2,7 @@ import { FaPhone, FaEnvelope, FaLocationDot } from 'react-icons/fa6';
 import { FaFacebookF, FaLinkedinIn, FaInstagram, FaGoogle, FaTiktok } from 'react-icons/fa';
 import ContactInfoCard from '../../components/ContactInfoCard/ContactInfoCard';
 import GradientButton from '../../components/GradientButton/GradientButton';
+import ScrollReveal from '../../components/ScrollReveal/ScrollReveal';
 import './Contact.css';
 
 const contactCards = [
@@ -42,7 +43,9 @@ export default function Contact() {
         <div className="container">
           <div className="contact-cards-section__grid">
             {contactCards.map((c, i) => (
-              <ContactInfoCard key={i} icon={c.icon} label={c.label} value={c.value} href={c.href} />
+              <ScrollReveal key={i} animation="fade-up" delay={i * 120}>
+                <ContactInfoCard icon={c.icon} label={c.label} value={c.value} href={c.href} />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -51,27 +54,29 @@ export default function Contact() {
       {/* ════════ MAIN CONTACT ════════ */}
       <section className="contact-main section" id="contact-main">
         <div className="container">
-          <div className="contact-main__inner">
-            <div className="contact-main__info">
-              <h2>Excited About The Project? <span className="gradient-text">Please Get In Touch.</span></h2>
-              <p>
-                Looking for a data-driven, results-oriented approach to marketing? Contact us for a personalized approach tailored to help your business succeed.
-              </p>
-              <GradientButton href="https://meetings-na2.hubspot.com/alex-gray" size="lg">
-                Get 30 Min FREE CONSULTATION
-              </GradientButton>
-              <div className="contact-main__socials">
-                <h4>Follow Us:</h4>
-                <div className="contact-main__social-icons">
-                  {socialIcons.map(({ Icon, label }) => (
-                    <a key={label} href="#" className="contact-main__social-icon" aria-label={label}>
-                      <Icon />
-                    </a>
-                  ))}
+          <ScrollReveal animation="fade-up">
+            <div className="contact-main__inner">
+              <div className="contact-main__info">
+                <h2>Excited About The Project? <span className="gradient-text">Please Get In Touch.</span></h2>
+                <p>
+                  Looking for a data-driven, results-oriented approach to marketing? Contact us for a personalized approach tailored to help your business succeed.
+                </p>
+                <GradientButton href="https://meetings-na2.hubspot.com/alex-gray" size="lg">
+                  Get 30 Min FREE CONSULTATION
+                </GradientButton>
+                <div className="contact-main__socials">
+                  <h4>Follow Us:</h4>
+                  <div className="contact-main__social-icons">
+                    {socialIcons.map(({ Icon, label }) => (
+                      <a key={label} href="#" className="contact-main__social-icon" aria-label={label}>
+                        <Icon />
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
       </section>
     </div>

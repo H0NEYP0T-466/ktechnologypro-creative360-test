@@ -9,6 +9,15 @@
   background: var(--bg-primary);
 }
 
+.hero__world-map {
+  position: absolute;
+  inset: 0;
+  background: url('/images/world-map-bg.png') center center / cover no-repeat;
+  opacity: 0.25;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .hero__bg-lines {
   position: absolute;
   inset: 0;
@@ -584,6 +593,14 @@
   height: 100%;
   background: linear-gradient(135deg, #1a1a2e, #16213e);
   transition: transform var(--transition-slow);
+  overflow: hidden;
+}
+
+.case-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .case-card:hover .case-card__image { transform: scale(1.05); }
