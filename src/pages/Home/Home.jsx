@@ -1,3 +1,4 @@
+import { useState, useRef, useCallback } from 'react';
 import { FaSearch, FaBullhorn, FaLaptopCode, FaShareAlt, FaCheckCircle, FaCog, FaHeadset, FaArrowRight } from 'react-icons/fa';
 import GradientButton from '../../components/GradientButton/GradientButton';
 import SectionHeading from '../../components/SectionHeading/SectionHeading';
@@ -138,6 +139,19 @@ const marqueeItems1 = ['Best Marketing Agency', 'Digital Strategy', 'Website Des
 const marqueeItems2 = ['SEO That Ranks & Scales', 'Conversion-Focused Design', 'Website Design', 'Performance-Driven Marketing'];
 
 export default function Home() {
+  const [cursorVisible, setCursorVisible] = useState(false);
+  const cursorRef = useRef(null);
+
+  const handleBlogMouseMove = useCallback((e) => {
+    if (cursorRef.current) {
+      cursorRef.current.style.left = `${e.clientX}px`;
+      cursorRef.current.style.top = `${e.clientY}px`;
+    }
+  }, []);
+
+  const handleBlogMouseEnter = useCallback(() => setCursorVisible(true), []);
+  const handleBlogMouseLeave = useCallback(() => setCursorVisible(false), []);
+
   return (
     <div className="home">
       {/* ════════ HERO ════════ */}
@@ -436,12 +450,24 @@ export default function Home() {
               </GradientButton>
             </div>
           </ScrollReveal>
-          <div className="blog-section__grid">
+          <div
+            className="blog-section__grid"
+            onMouseMove={handleBlogMouseMove}
+            onMouseEnter={handleBlogMouseEnter}
+            onMouseLeave={handleBlogMouseLeave}
+          >
             {blogPosts.map((post, i) => (
               <ScrollReveal key={i} animation="fade-up" delay={i * 120} duration={600}>
                 <BlogCard title={post.title} excerpt={post.excerpt} image={post.image} />
               </ScrollReveal>
             ))}
+          </div>
+          {/* Custom cursor */}
+          <div
+            ref={cursorRef}
+            className={`blog-cursor ${cursorVisible ? 'blog-cursor--visible' : ''}`}
+          >
+            VIEW
           </div>
         </div>
       </section>

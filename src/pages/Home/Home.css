@@ -715,15 +715,50 @@
 
 .blog-section__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  cursor: none;
+}
+
+.blog-section__grid * {
+  cursor: none !important;
+}
+
+/* ── Custom Blog Cursor ── */
+.blog-cursor {
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--accent-purple);
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition:
+    transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    opacity 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+.blog-cursor--visible {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
 }
 
 /* ═══════════ RESPONSIVE ═══════════ */
 @media (max-width: 1024px) {
   .stats-section__grid { grid-template-columns: repeat(2, 1fr); }
   .metrics-section__grid { grid-template-columns: repeat(2, 1fr); }
-  .blog-section__grid { grid-template-columns: repeat(2, 1fr); }
   .value-section__cards { grid-template-columns: repeat(2, 1fr); }
   .cases-section__grid { grid-template-columns: repeat(2, 1fr); }
 }

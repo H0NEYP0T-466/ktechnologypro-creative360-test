@@ -38,6 +38,8 @@
   border-radius: var(--radius-xl);
   background: linear-gradient(135deg, #1a1a2e, #16213e);
   border: 1px solid rgba(255, 255, 255, 0.06);
+  object-fit: cover;
+  display: block;
 }
 
 .about-founder__content p {

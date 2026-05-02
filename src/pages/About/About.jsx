@@ -62,7 +62,7 @@ export default function About() {
           <div className="about-founder__grid">
             <ScrollReveal animation="fade-right">
               <div className="about-founder__image">
-                <div className="about-founder__image-inner" />
+                <img className="about-founder__image-inner" src="/images/founder.png" alt="Alex Gray — Founder of Creative 360 Pro" />
               </div>
             </ScrollReveal>
             <ScrollReveal animation="fade-left" delay={200} className="about-founder__content">
