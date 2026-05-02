@@ -1,0 +1,105 @@
+name: "Bug report"
+description: "Report a reproducible problem"
+labels: ["bug"]
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug! Please fill out the details below to help us investigate.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: A clear and concise description of what the bug is.
+      placeholder: "When I click the mobile menu button, it doesn't close after navigating to a new page."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: List the exact steps to reproduce the behavior.
+      placeholder: |
+        1. Go to the homepage
+        2. Click on the hamburger menu
+        3. Click on 'Services' link
+        4. Observe the menu stays open
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "The mobile menu should close automatically after navigating."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happened?
+      placeholder: "The mobile menu stayed open, covering the page content."
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Please provide your environment details.
+      placeholder: |
+        - OS: Windows 11 / macOS Sonoma / Ubuntu 24.04
+        - Browser: Chrome 124 / Firefox 125 / Safari 17
+        - Node.js version: 20.12.0
+        - npm version: 10.5.0
+      value: |
+        - OS:
+        - Browser:
+        - Node.js version:
+        - npm version:
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant Logs / Console Output
+      description: Paste any relevant error messages or console output.
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain the problem.
+      placeholder: "Drag and drop images here or paste from clipboard."
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - "Low — Minor issue, workaround available"
+        - "Medium — Affects functionality but doesn't block usage"
+        - "High — Blocks core functionality"
+        - "Critical — App crash or data loss"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here.
+      placeholder: "This only happens on mobile viewports under 768px..."
