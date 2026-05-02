@@ -1,0 +1,94 @@
+/* ===== Creative360Pro Design Tokens ===== */
+:root {
+  /* ── Backgrounds ── */
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-tertiary: #111111;
+  --bg-card: rgba(255, 255, 255, 0.04);
+  --bg-card-hover: rgba(255, 255, 255, 0.07);
+
+  /* ── Gradients ── */
+  --gradient-primary: linear-gradient(135deg, #8B5CF6, #D946EF);
+  --gradient-purple-orange: linear-gradient(135deg, #9333EA, #F97316);
+  --gradient-hero: linear-gradient(135deg, #7C3AED 0%, #1a1a2e 100%);
+  --gradient-text: linear-gradient(135deg, #8B5CF6, #D946EF, #EC4899);
+  --gradient-card-purple: linear-gradient(160deg, rgba(88, 28, 135, 0.6), rgba(15, 15, 30, 0.95));
+  --gradient-card-orange: linear-gradient(160deg, rgba(234, 88, 12, 0.5), rgba(15, 15, 30, 0.95));
+  --gradient-cta-btn: linear-gradient(135deg, #9333EA 0%, #EC4899 50%, #F97316 100%);
+  --gradient-winning: linear-gradient(135deg, #9333EA, #F97316);
+  --gradient-blue-glow: linear-gradient(180deg, rgba(59, 130, 246, 0.15) 0%, transparent 50%);
+
+  /* ── Text Colors ── */
+  --text-primary: #FFFFFF;
+  --text-secondary: #E5E7EB;
+  --text-muted: #9CA3AF;
+  --text-dimmed: #6B7280;
+  --text-purple-light: #C4B5FD;
+
+  /* ── Accent Colors ── */
+  --accent-purple: #8B5CF6;
+  --accent-pink: #D946EF;
+  --accent-blue: #3B82F6;
+  --accent-orange: #F97316;
+  --accent-green: #10B981;
+  --accent-rose: #F43F5E;
+
+  /* ── Typography ── */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* ── Font Sizes ── */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.25rem;
+  --fs-2xl: 1.5rem;
+  --fs-3xl: 1.875rem;
+  --fs-4xl: 2.25rem;
+  --fs-5xl: 3rem;
+  --fs-6xl: 3.75rem;
+  --fs-7xl: 4.5rem;
+  --fs-hero: clamp(3.5rem, 7vw, 6rem);
+
+  /* ── Spacing ── */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-section: clamp(5rem, 10vw, 8rem);
+
+  /* ── Border Radius ── */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
+  --radius-pill: 50px;
+  --radius-full: 50%;
+
+  /* ── Card Styles ── */
+  --card-border: 1px solid rgba(255, 255, 255, 0.08);
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 16px 48px rgba(139, 92, 246, 0.15);
+  --glass-blur: blur(12px);
+
+  /* ── Transitions ── */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-spring: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* ── Z-index ── */
+  --z-header: 1000;
+  --z-overlay: 900;
+  --z-modal: 1100;
+
+  /* ── Container ── */
+  --container-max: 1280px;
+  --container-padding: clamp(1.25rem, 4vw, 2.5rem);
+}

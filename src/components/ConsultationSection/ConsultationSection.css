@@ -1,0 +1,75 @@
+.consultation-section {
+  padding: var(--space-section) 0;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.consultation-section__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* ── Left: Let's Talk ── */
+.consultation-section__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.consultation-section__lets-talk {
+  display: flex;
+  flex-direction: column;
+  line-height: 0.9;
+}
+
+.consultation-section__lets {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.08);
+  letter-spacing: -0.02em;
+}
+
+.consultation-section__talk {
+  font-family: var(--font-heading);
+  font-size: clamp(4rem, 10vw, 8rem);
+  font-weight: 900;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.02em;
+}
+
+/* ── Right: Form ── */
+.consultation-section__right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.consultation-section__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .consultation-section__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .consultation-section__lets-talk {
+    align-items: center;
+  }
+
+  .consultation-section__right {
+    align-items: center;
+  }
+}

@@ -1,0 +1,122 @@
+.services-hero {
+  position: relative;
+  padding: 6rem 0 4rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.services-hero__glow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.1) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.services-hero__title {
+  font-size: clamp(2.25rem, 5vw, 4rem);
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1rem;
+}
+
+.services-hero__subtitle {
+  font-size: var(--fs-lg);
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.services-grid-section__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.services-trust {
+  background: var(--bg-secondary);
+}
+
+.services-trust__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.trust-card {
+  padding: 2rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.trust-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(139, 92, 246, 0.25);
+  box-shadow: 0 12px 40px rgba(139, 92, 246, 0.1);
+}
+
+.trust-card__icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background: rgba(139, 92, 246, 0.12);
+  color: var(--accent-purple);
+  font-size: 1.3rem;
+  margin: 0 auto 1rem;
+  transition: all var(--transition-base);
+}
+
+.trust-card:hover .trust-card__icon {
+  background: var(--gradient-primary);
+  color: white;
+}
+
+.trust-card__title {
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.trust-card__desc {
+  font-size: var(--fs-sm);
+}
+
+.services-cta__inner {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.services-cta__inner h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 900;
+  margin-bottom: 0.75rem;
+}
+
+.services-cta__inner p {
+  margin-bottom: 1.5rem;
+}
+
+.services-cta__actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .services-grid-section__grid { grid-template-columns: 1fr; }
+  .services-trust__grid { grid-template-columns: 1fr; }
+}
