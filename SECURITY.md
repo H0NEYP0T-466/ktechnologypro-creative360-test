@@ -8,7 +8,7 @@ We take security seriously. If you discover a security vulnerability in this pro
 
 **Option 1 — GitHub Issues (Preferred)**
 
-Open a [security issue](https://github.com/H0NEP0T-466/ktechnologypro-task/issues) with the `security` label and include:
+Open a [security issue](https://github.com/H0NEYP0T-466/ktechnologypro-creative360-test/issues) with the `security` label and include:
 
 - Description of the vulnerability
 - Steps to reproduce

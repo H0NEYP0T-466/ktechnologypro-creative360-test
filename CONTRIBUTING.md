@@ -10,8 +10,8 @@ Thank you for your interest in contributing! This document outlines how to parti
 
 ```bash
 # Fork the repository on GitHub, then:
-git clone https://github.com/YOUR_USERNAME/ktechnologypro-task.git
-cd ktechnologypro-task
+git clone https://github.com/YOUR_USERNAME/ktechnologypro-creative360-test.git
+cd ktechnologypro-creative360-test
 ```
 
 ### 2. Create a Branch
@@ -82,7 +82,7 @@ npm run lint
 
 ## 🐛 Bug Reports
 
-Found a bug? Please [open an issue](https://github.com/H0NEP0T-466/ktechnologypro-task/issues/new?template=bug_report.yml) with:
+Found a bug? Please [open an issue](https://github.com/H0NEYP0T-466/ktechnologypro-creative360-test/issues/new?template=bug_report.yml) with:
 
 1. **Clear description** of the bug
 2. **Steps to reproduce** (numbered list)
@@ -96,7 +96,7 @@ Found a bug? Please [open an issue](https://github.com/H0NEP0T-466/ktechnologypr
 
 ## ✨ Feature Requests
 
-Have an idea? Please [open a feature request](https://github.com/H0NEP0T-466/ktechnologypro-task/issues/new?template=feature_request.yml) with:
+Have an idea? Please [open a feature request](https://github.com/H0NEYP0T-466/ktechnologypro-creative360-test/issues/new?template=feature_request.yml) with:
 
 1. **Problem statement** — what problem does this solve?
 2. **Proposed solution** — your idea

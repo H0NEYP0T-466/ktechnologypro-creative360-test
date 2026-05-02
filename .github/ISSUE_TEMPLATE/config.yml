@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: "💬 Discussions"
-    url: https://github.com/H0NEP0T-466/ktechnologypro-task/discussions
+    url: https://github.com/H0NEYP0T-466/ktechnologypro-creative360-test/discussions
     about: Ask questions, share ideas, or start a conversation.
   - name: "🛡️ Security Reporting"
-    url: https://github.com/H0NEP0T-466/ktechnologypro-task/security/advisories/new
+    url: https://github.com/H0NEYP0T-466/ktechnologypro-creative360-test/security/advisories/new
     about: Report security vulnerabilities privately.
   - name: "❓ Q&A"
-    url: https://github.com/H0NEP0T-466/ktechnologypro-task/discussions/categories/q-a
+    url: https://github.com/H0NEYP0T-466/ktechnologypro-creative360-test/discussions/categories/q-a
     about: Get help with usage, setup, or troubleshooting.

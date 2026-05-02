@@ -3,21 +3,21 @@
 <p align="center">
 
   <!-- Core -->
-  ![GitHub License](https://img.shields.io/github/license/H0NEP0T-466/ktechnologypro-task?style=for-the-badge&color=brightgreen)
-  ![GitHub Stars](https://img.shields.io/github/stars/H0NEP0T-466/ktechnologypro-task?style=for-the-badge&color=yellow)
-  ![GitHub Forks](https://img.shields.io/github/forks/H0NEP0T-466/ktechnologypro-task?style=for-the-badge&color=blue)
-  ![GitHub Issues](https://img.shields.io/github/issues/H0NEP0T-466/ktechnologypro-task?style=for-the-badge&color=red)
-  ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/H0NEP0T-466/ktechnologypro-task?style=for-the-badge&color=orange)
+  ![GitHub License](https://img.shields.io/github/license/H0NEYP0T-466/ktechnologypro-creative360-test?style=for-the-badge&color=brightgreen)
+  ![GitHub Stars](https://img.shields.io/github/stars/H0NEYP0T-466/ktechnologypro-creative360-test?style=for-the-badge&color=yellow)
+  ![GitHub Forks](https://img.shields.io/github/forks/H0NEYP0T-466/ktechnologypro-creative360-test?style=for-the-badge&color=blue)
+  ![GitHub Issues](https://img.shields.io/github/issues/H0NEYP0T-466/ktechnologypro-creative360-test?style=for-the-badge&color=red)
+  ![GitHub Pull Requests](https://img.shields.io/github/issues-pr/H0NEYP0T-466/ktechnologypro-creative360-test?style=for-the-badge&color=orange)
   ![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-brightgreen?style=for-the-badge)
 
   <!-- Activity -->
-  ![Last Commit](https://img.shields.io/github/last-commit/H0NEP0T-466/ktechnologypro-task?style=for-the-badge&color=purple)
-  ![Commit Activity](https://img.shields.io/github/commit-activity/m/H0NEP0T-466/ktechnologypro-task?style=for-the-badge&color=teal)
-  ![Repo Size](https://img.shields.io/github/repo-size/H0NEP0T-466/ktechnologypro-task?style=for-the-badge&color=blueviolet)
+  ![Last Commit](https://img.shields.io/github/last-commit/H0NEYP0T-466/ktechnologypro-creative360-test?style=for-the-badge&color=purple)
+  ![Commit Activity](https://img.shields.io/github/commit-activity/m/H0NEYP0T-466/ktechnologypro-creative360-test?style=for-the-badge&color=teal)
+  ![Repo Size](https://img.shields.io/github/repo-size/H0NEYP0T-466/ktechnologypro-creative360-test?style=for-the-badge&color=blueviolet)
 
   <!-- Languages -->
-  ![Top Language](https://img.shields.io/github/languages/top/H0NEP0T-466/ktechnologypro-task?style=for-the-badge&color=critical)
-  ![Languages Count](https://img.shields.io/github/languages/count/H0NEP0T-466/ktechnologypro-task?style=for-the-badge&color=success)
+  ![Top Language](https://img.shields.io/github/languages/top/H0NEYP0T-466/ktechnologypro-creative360-test?style=for-the-badge&color=critical)
+  ![Languages Count](https://img.shields.io/github/languages/count/H0NEYP0T-466/ktechnologypro-creative360-test?style=for-the-badge&color=success)
 
   <!-- Community -->
   ![Open Source Love](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red?style=for-the-badge)
@@ -32,9 +32,9 @@ A modern, high-performance website for **Creative 360 Pro** — a results-driven
 
 | Link | Description |
 |------|-------------|
-| 🌐 **Live Demo** | Coming Soon |
+| 🌐 **Live Demo** | [ktechnologypro-creative360-test.vercel.app](https://ktechnologypro-creative360-test.vercel.app) |
 | 📖 **Documentation** | This README |
-| 🐛 **Issues** | [GitHub Issues](https://github.com/H0NEP0T-466/ktechnologypro-task/issues) |
+| 🐛 **Issues** | [GitHub Issues](https://github.com/H0NEYP0T-466/ktechnologypro-creative360-test/issues) |
 | 🤝 **Contributing** | [CONTRIBUTING.md](./CONTRIBUTING.md) |
 
 ---
@@ -107,10 +107,10 @@ A modern, high-performance website for **Creative 360 Pro** — a results-driven
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/H0NEP0T-466/ktechnologypro-task.git
+git clone https://github.com/H0NEYP0T-466/ktechnologypro-creative360-test.git
 
 # 2. Navigate to the project directory
-cd ktechnologypro-task
+cd ktechnologypro-creative360-test
 
 # 3. Install dependencies
 npm install
@@ -163,7 +163,7 @@ Runs ESLint with the configured React hooks and React refresh plugins to ensure 
 ## 📂 Folder Structure
 
 ```
-ktechnologypro-task/
+ktechnologypro-creative360-test/
 ├── .github/                          # GitHub configuration
 │   ├── ISSUE_TEMPLATE/               # Issue form templates
 │   │   ├── bug_report.yml
@@ -266,8 +266,8 @@ We welcome contributions from the community! Please read our [Contributing Guide
 
 Quick links:
 
-- 🐛 [Report a Bug](https://github.com/H0NEP0T-466/ktechnologypro-task/issues/new?template=bug_report.yml)
-- ✨ [Request a Feature](https://github.com/H0NEP0T-466/ktechnologypro-task/issues/new?template=feature_request.yml)
+- 🐛 [Report a Bug](https://github.com/H0NEYP0T-466/ktechnologypro-creative360-test/issues/new?template=bug_report.yml)
+- ✨ [Request a Feature](https://github.com/H0NEYP0T-466/ktechnologypro-creative360-test/issues/new?template=feature_request.yml)
 - 📋 [Code of Conduct](./CODE_OF_CONDUCT.md)
 
 ---
@@ -290,4 +290,4 @@ We are committed to providing a welcoming and inclusive experience. Please read 
 
 ---
 
-<p align="center">Made with ❤ by <a href="https://github.com/H0NEP0T-466">H0NEP0T-466</a></p>
+<p align="center">Made with ❤️ by <a href="https://github.com/H0NEYP0T-466">H0NEYP0T-466</a></p>
